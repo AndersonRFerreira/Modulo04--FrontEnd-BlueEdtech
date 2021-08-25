@@ -2,12 +2,24 @@ export const Api = {
 
   baseUrl: 'https://blue-backend-modulo4front.herokuapp.com',
 
-  authorization: 'inunes@blueedtech.com.br',
+  authorization: 'andersonn.reis90@gmail.com',
 
+  readAllUrl: () => Api.baseUrl + '/',
   createUrl: () => Api.baseUrl + '/',
-
   deleteAllUrl: () => Api.baseUrl + '/',
+  deleteUrl: id => Api.baseUrl + '/' + id,
 
+  //FAZER UM GET ALL, PARA PEGAR TUDO
+  buildApiGetRequest: (url) => {
+    return fetch(url, {
+      method: 'GET',
+      headers: new Headers({
+        Authorization: Api.authorization,
+      }),
+    });
+  },
+
+ 
   //FAZER UM POST PARA CADASTRAR DADOS
   buildApiPostRequest: (url, body) => {
     return fetch(url, {
