@@ -20,23 +20,24 @@ export default function Create() {
     raca: raca,
     saga: saga,
     poder: poder
-  }
+  };
 
   const submitHandler = async event => {
 
     event.preventDefault();
 
     const request = await Api.buildApiPostRequest(Api.createUrl(), item)
-    .catch(e => {
+    .catch((e) => {
       console.error('Erro ao tentar adicionar o item ao banco: ', e);
-    })
+    }
+  );
 
     const result = await request.json();
     const id = result._id;
 
     history.push(`/view/${id}`);
 
-  }
+  };
 
   return (
     <>
@@ -45,13 +46,13 @@ export default function Create() {
       <S.Form onSubmit={submitHandler}>
 
         <S.Label htmlFor="name">Nome</S.Label>
-        <S.Input id="name" type="text" onChange={e => setName(e.target.value)} required></S.Input>
+        <S.Input id="name" type="text" onChange={(e) => setName(e.target.value)} required></S.Input>
 
         <S.Label htmlFor="url">URL da Imagem</S.Label>
-        <S.Input id="url" type="text" onChange={e => setUrl(e.target.value)} required></S.Input>
+        <S.Input id="url" type="text" onChange={(e) => setUrl(e.target.value)} required></S.Input>
 
         <S.Label htmlFor="raca">Raça</S.Label>
-        <S.Select id="raca" onChange={e => setRaca(e.target.value)} required>
+        <S.Select id="raca" onChange={(e) => setRaca(e.target.value)} required>
         <option value="" hidden>-</option>
           <option value="Androide">Androide</option>
           <option value="Animal">Animal</option>
@@ -68,7 +69,7 @@ export default function Create() {
         </S.Select>
 
         <S.Label htmlFor="saga">Saga</S.Label>
-        <S.Select id="saga" onChange={e => setSaga(e.target.value)} required>
+        <S.Select id="saga" onChange={(e) => setSaga(e.target.value)} required>
         <option value="" hidden>-</option>
           <option value="Pilaf">Pilaf</option>
           <option value="21º Torneio">21º Torneio</option>
@@ -88,7 +89,7 @@ export default function Create() {
         </S.Select>
 
         <S.Label htmlFor="poder">Poder de Luta</S.Label>
-        <S.Input id="poder" type="number" min="0" onChange={e => setPoder(e.target.value)} required></S.Input>
+        <S.Input id="poder" type="number" min="0" onChange={(e) => setPoder(e.target.value)} required></S.Input>
         
         <S.Button>Cadastrar</S.Button>
       </S.Form>

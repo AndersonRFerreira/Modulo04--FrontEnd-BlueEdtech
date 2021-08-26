@@ -4,7 +4,7 @@ import Power from '../../Components/Power/Power';
 import { useHistory } from 'react-router-dom';
 
 
-export default function ReadOne() {
+export default function ReadOne(props) {
   const item = props.location.state;
 
   const history = useHistory();
@@ -13,6 +13,11 @@ export default function ReadOne() {
     event.preventDefault();
     history.push(`/delete/${item._id}`, item);
   };
+
+  const editHandler = async(event) =>{
+    event.preventDefault();
+    history.push(`/update/:${item._id}`, item);
+  }
 
   return (
     <>
@@ -39,7 +44,7 @@ export default function ReadOne() {
         </S.Text>
 
         <S.ButtonArea>
-          <S.ButtonEdit>Editar</S.ButtonEdit>
+          <S.ButtonEdit onClick={editHandler}>Editar</S.ButtonEdit>
           <S.ButtonDelete onClick={deleteHandler}>Deletar</S.ButtonDelete>
         </S.ButtonArea>
       </S.Card>

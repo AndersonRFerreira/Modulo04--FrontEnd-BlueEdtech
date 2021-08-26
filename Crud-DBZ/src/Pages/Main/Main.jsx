@@ -8,6 +8,8 @@ import DeleteAll from "../DeleteAll/DeleteAll";
 import About from "../About/About";
 import ReadOne from "../ReadOne/ReadOne";
 import DeleteOne from '../DeleteOne/DeleteOne';
+import UpdateOne from '../UpdateOne/UpdateOne';
+import Error from '../Error/Error';
 import { ThemeButton } from "../../Components/ThemeButton/styled";
 import { GlobalStyles } from "../../Components/GlobalStyles/styled";
 import { lightTheme, darkTheme } from "../../Components/Theme/styled";
@@ -34,6 +36,8 @@ export default function Main() {
             <Route path="/about" component={About}></Route>
             <Route path="/view/:id" component={ReadOne}></Route>
             <Route path="/delete/:id" component={DeleteOne}></Route>
+            <Route path="/update/:id" component={UpdateOne}></Route>
+            <Route component={Error}></Route>
           </Switch>
 
           <ThemeButton className="im im-light-bulb" onClick={themeToggler}></ThemeButton>

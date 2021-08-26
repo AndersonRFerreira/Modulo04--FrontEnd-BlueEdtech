@@ -20,17 +20,17 @@ export default function DeleteOne(props) {
     history.push(`/view/${item._id}`, item);
   }
 
-  const clickHandler = async event => {
+  const clickHandler = async (event) => {
     setLoading(true);
     event.preventDefault();
     
     await Api.buildApiDeleteRequest(Api.deleteUrl(item._id))
     .catch(e => {
       console.error('Error ao tratar deletar o item: ', e)
-    })
+    });
 
     goToHome();
-  }
+  };
 
   return (
     <>

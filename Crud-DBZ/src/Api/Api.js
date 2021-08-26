@@ -4,10 +4,24 @@ export const Api = {
 
   authorization: 'andersonn.reis90@gmail.com',
 
+  // GET para pegar dados
+  // DELETE para deletar dados
+  // POST para criar dados
+  // PUT para alterar dados existente
+  
+  
   readAllUrl: () => Api.baseUrl + '/',
+  readOneUrl: id =>Api.baseUrl + '/' + id,
+
   createUrl: () => Api.baseUrl + '/',
+
   deleteAllUrl: () => Api.baseUrl + '/',
-  deleteUrl: id => Api.baseUrl + '/' + id,
+  deleteUrl: (id) => Api.baseUrl + '/' + id,
+
+  updateUrl: (id) => Api.baseUrl + '/' + id,
+
+
+  //https://blue-backend-modulo4front.herokuapp.com/226
 
   //FAZER UM GET ALL, PARA PEGAR TUDO
   buildApiGetRequest: (url) => {
@@ -19,20 +33,32 @@ export const Api = {
     });
   },
 
- 
   //FAZER UM POST PARA CADASTRAR DADOS
   buildApiPostRequest: (url, body) => {
     return fetch(url, {
       method: 'POST',
-
       headers: new Headers({
         Authorization: Api.authorization,
         'Content-Type': 'application/json'
       }),
       
       body: JSON.stringify(body)
-    })
+    });
   },
+
+  // fazer um put para alterar os dados
+  buildApiPutRequest: (url, body) =>{
+    
+    return fetch(url, {
+      method: 'PUT',
+      headers: new Headers ({
+        Authorization: Api.Authorization,
+        'Content-type': 'application/json',
+      }),
+      body: JSON.stringify(body),
+    });
+  },
+
 
   //FAZER UM DELETE PARA APAGAR TODOS OS DADOS
   buildApiDeleteRequest: url => {
@@ -40,7 +66,7 @@ export const Api = {
       method: 'DELETE',
       headers: new Headers ({
         Authorization: Api.authorization
-      })
-    })
-  }
-}
+      }),
+    });
+  },
+};
