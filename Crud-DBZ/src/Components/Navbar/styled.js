@@ -6,7 +6,7 @@ export const Navbar = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  background-color: #e76a24;
+  background-color: #FFF05A;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   padding: 0 2rem;
 
@@ -44,5 +44,5 @@ export const ListItem = styled.li`
 
 export const LinkedPage = styled(Link)`
   text-decoration: none;
-  color: #ffffff;
+  color: #191919;
 `;

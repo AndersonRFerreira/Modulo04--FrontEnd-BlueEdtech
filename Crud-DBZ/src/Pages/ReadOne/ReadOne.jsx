@@ -3,7 +3,6 @@ import * as S from './styled';
 import Power from '../../Components/Power/Power';
 import { useHistory } from 'react-router-dom';
 
-
 export default function ReadOne(props) {
   const item = props.location.state;
 
@@ -14,10 +13,10 @@ export default function ReadOne(props) {
     history.push(`/delete/${item._id}`, item);
   };
 
-  const editHandler = async(event) =>{
+  const editHandler = async (event) => {
     event.preventDefault();
-    history.push(`/update/:${item._id}`, item);
-  }
+    history.push(`/update/${item._id}`, item);
+  };
 
   return (
     <>
@@ -51,4 +50,3 @@ export default function ReadOne(props) {
     </>
   );
 }
-    

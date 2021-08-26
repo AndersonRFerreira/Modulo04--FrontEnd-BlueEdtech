@@ -15,7 +15,7 @@ export default function Power(props) {
   
     const fill = {
       width: fillValue,
-      backgroundColor: '#e76a24',
+      backgroundColor: '#c5db5f',
       height: '1.7rem',
       borderRadius: '0.4rem',
       display: 'flex',

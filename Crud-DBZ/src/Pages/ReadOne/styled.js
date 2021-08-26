@@ -33,7 +33,7 @@ export const ButtonArea = styled.div`
 `;
 
 export const ButtonDelete = styled.button`
-  background-color: #e76a24;
+  background-color: #b15019;
   color: #ffffff;
   font-size: 1.2em;
   padding: 0.4rem 1rem;
@@ -44,12 +44,12 @@ export const ButtonDelete = styled.button`
   transition: 200ms;
   margin: 0 0.4rem 0 0.4rem;
   &:hover {
-    background-color: #b15019;
+    background-color: #ff785a;
   }
 `;
 
 export const ButtonEdit = styled.button`
-  background-color: #1c4595;
+  background-color: #b15019;
   color: #ffffff;
   font-size: 1.2em;
   padding: 0.4rem 1rem;
@@ -60,7 +60,7 @@ export const ButtonEdit = styled.button`
   transition: 200ms;
   margin: 0 0.4rem 0 0.4rem;
   &:hover {
-    background-color: #183c80;
+    background-color: #ff785a;
   }
 `;
 

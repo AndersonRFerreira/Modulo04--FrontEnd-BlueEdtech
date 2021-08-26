@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const CardArea = styled.div`
-  background-color: #ffffff;
+  background-color: #ffaa5a;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.9rem;
   margin: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
@@ -22,7 +22,7 @@ export const CardImg = styled.img`
 `;
 
 export const Name = styled.h3`
-  color: #e76a24;
+  color: #191919;
   text-align: center;
   padding: 0.5rem;
   background-color: #ffffff;

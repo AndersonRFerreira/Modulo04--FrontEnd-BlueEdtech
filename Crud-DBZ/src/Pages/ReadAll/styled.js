@@ -6,6 +6,7 @@ export const CardArea = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  border-radius: 50%;
 `;
 
 export const Linked = styled(Link)`
