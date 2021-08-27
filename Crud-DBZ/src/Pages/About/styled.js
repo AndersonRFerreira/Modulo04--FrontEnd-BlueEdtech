@@ -22,7 +22,7 @@ export const SocialBlock = styled.div`
   justify-content: center;
 
   & a {
-    color: #e76a24;
+    color: #fff05a;
     
     & i {
       padding: 0 0.5rem;
